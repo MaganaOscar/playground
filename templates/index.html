@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+        margin: 1em 0 1em 0;
+    }
+    .boxes{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .box{
+        margin: 0 2em 2em 2em;
+        height: 10em;
+        width: 10em;
+        background-color: aquamarine;
+        border: 2px solid black;
+    }
+    .box :last-child{
+        margin-right: auto;
+    }
+    .color{
+        background-color: {{color}};
+    }
+</style>
+<body>
+    <h1>Welcome!</h1>
+    <div class="boxes">
+        {% for x in range(0, times): %}
+            <div class="box color"></div>
+        {% endfor %}
+    </div>
+</body>
+</html>
